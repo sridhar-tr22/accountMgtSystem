@@ -22,8 +22,11 @@ import com.demo.hcl.ing.saving.service.RegisterNewBeneficiary;
 import com.demo.hcl.ing.saving.service.RegisterNewCustomer;
 import com.demo.hcl.ing.saving.service.TransactionService;
 
+import lombok.extern.log4j.Log4j2;
+
 @RestController
 @RequestMapping("/bank")
+@Log4j2
 public class AccountController {
 
 	@Autowired
@@ -54,6 +57,7 @@ public class AccountController {
 		responseObject = new ResponseObject();
 		message = new Message();
 		Customer customerDetails = registerNewCustomer.newCustomerDetails(customer.getCustomer());
+		//log.info(customerDetails.getFirstName());
 		if (customerDetails != null) {
 
 			CustomerResponse customerResponse = new CustomerResponse();

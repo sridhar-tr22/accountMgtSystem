@@ -2,8 +2,9 @@ package com.demo.hcl.ing.saving.utils;
 
 import java.util.Random;
 
-import org.springframework.stereotype.Service;
-@Service
+import org.springframework.stereotype.Component;
+
+@Component
 public class AccountUtils {
 	public Long generateNewAccountNumber() {
 		Random rnd = new Random();

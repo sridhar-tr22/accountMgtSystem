@@ -11,7 +11,7 @@ import com.demo.hcl.ing.saving.entity.Customer;
 import com.demo.hcl.ing.saving.entity.CustomerCredentials;
 import com.demo.hcl.ing.saving.utils.AccountUtils;
 
-@Service
+@Service("registerNewCustomer")
 public class RegisterNewCustomerImpl implements RegisterNewCustomer {
 
 	@Autowired
